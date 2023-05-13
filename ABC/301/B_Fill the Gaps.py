@@ -14,12 +14,10 @@ def solve():
         if S[i] > S[i-1]:
             ans.extend(list(range(S[i-1]+1, S[i])))
         else:
-            temp = list(range(S[i]+1, S[i-1]))
-            temp.reverse()
-            ans.extend(temp)
+            ans.extend(list(range(S[i-1], S[i]+1, -1)))
         ans.append(S[i])
 
-    print(" ".join(map(str, ans)))
+    print(*ans)
 
 if __name__ == '__main__':
     solve()
