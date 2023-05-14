@@ -14,7 +14,7 @@ def solve():
             elif j == 2:
                 dp[i][j] = max(dp[i-1][0] + happies[i][j], dp[i-1][1] + happies[i][j])
 
-    print(max(dp[N-1]))
+    print(dp[N-1])
 
 if __name__ == '__main__':
     solve()
